@@ -1,0 +1,4 @@
+sim/*
+!sim/.gitkeep
+*.vcd
+*.vvp

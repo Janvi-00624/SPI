@@ -1,0 +1,6 @@
+{
+  "files.associations": { "*.v": "verilog", "*.vh": "verilog" },
+  "verilog.linting.linter": "verilator",
+  "verilog.linting.verilator.arguments": "-Wall",
+  "files.insertFinalNewline": true
+}
