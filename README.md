@@ -111,6 +111,20 @@ Example (100 MHz clock, `CLK_DIV=4`): SCLK = 12.5 MHz.
 * `CS_N` must stay high for at least ~3 slave clock cycles between words (see master `CS_GAP`).
 * One word per `CS_N` assertion; extra SCLK edges are ignored until `CS_N` is released.
 
+
+## Synthesis
+
+Synthesized with Yosys 0.66 (`synth_ice40`), default parameters
+(8-bit, CLK_DIV=4, mode 0):
+
+| Module     | LUT4 | FFs | Carry |
+|------------|------|-----|-------|
+| spi_master | 50   | 44  | 5     |
+| spi_slave  | 22   | 36  | 2     |
+
+The slave's MISO tri-state buffer is left as a generic cell (it would map to an SB_IO at the top level). No place-and-route or hardware testing
+has been done yet.
+
 ## What the testbench checks
 
 The slave runs on a **different clock (7 ns) than the master (10 ns)**, so the synchronizers are
