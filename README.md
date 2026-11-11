@@ -1,5 +1,7 @@
 # SPI Master / Slave (Verilog)
 
+![CI](https://github.com/Janvi-00624/SPI/actions/workflows/ci.yml/badge.svg)
+
 Parameterized, full-duplex SPI master and slave with a self-checking testbench
 and a regression that sweeps all four SPI modes, several data widths and
 several clock dividers.
